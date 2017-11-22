@@ -28,7 +28,7 @@ Where the IP address, in the example above `52.179.14.59`,  matches the IP addre
 
 The YAML will now look similar to the following image:
 
-![Load balancer in service configuration with reserved IP](./guestbook-frontend-loadbalance-reserved.png)
+![Load balancer in service configuration with reserved IP](https://raw.githubusercontent.com/marrobi/blog-posts/master/k8s-loadbalancer/guestbook-frontend-loadbalance-reserved.png)
 
 4. Save the file, and redeploy the service by running the following command:
 
@@ -38,7 +38,7 @@ The YAML will now look similar to the following image:
 
 5. Type `kubectl get svc` to see the state of the services in the cluster. While the load balancer configures the rule, the `EXTERNAL-IP` of the `frontend` service appears as `<pending>`. After a few minutes, the external IP address is configured to match your reserved IP:
 
-    ![Configure Azure load balancer](./guestbook-external-ip-reserved.png)
+    ![Configure Azure load balancer](https://raw.githubusercontent.com/marrobi/blog-posts/master/k8s-loadbalancer/guestbook-external-ip-reserved.png)
 
 ### Considerations
 * The Reserved IP address must be in the same resource group as the cluster.
