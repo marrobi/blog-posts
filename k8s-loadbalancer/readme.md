@@ -2,7 +2,7 @@
 
 Each time a Kubernetes service is created within an ACS or AKS cluster a static Azure IP address is assigned. If an IP address exists in the resource group that is not assigned to a service this will be used, otherwise a new address is requested. This means if a service is deleted and recreated it is not guaranteed to get the same IP address. Should you wish to configure the service to always receive the same IP address the load balancer can be provisioned to use a specific IP address.
 
-This is described in the Kubernetes docs:  https://kubernetes.io/docs/concepts/services-networking/service/#type-loadbalancer.
+This is described in the Kubernetes docs:  [https://kubernetes.io/docs/concepts/services-networking/service/#type-loadbalancer](https://kubernetes.io/docs/concepts/services-networking/service/#type-loadbalancer).
 
 I have been asked how to do this on Azure a number of times, the steps to follow are:
 
@@ -24,11 +24,11 @@ I have been asked how to do this on Azure a number of times, the steps to follow
     loadBalancerIP: 52.179.14.59
     ```
 
-Where the IP address, in the example above `52.179.14.59`,  matches the IP address retrieved in step 2.
+    Where the IP address, in the example above `52.179.14.59`,  matches the IP address retrieved in step 2.
 
-The YAML will now look similar to the following image:
+    The YAML will now look similar to the following image:
 
-![Load balancer in service configuration with reserved IP](https://raw.githubusercontent.com/marrobi/blog-posts/master/k8s-loadbalancer/guestbook-frontend-loadbalance-reserved.png)
+    ![Load balancer in service configuration with reserved IP](https://raw.githubusercontent.com/marrobi/blog-posts/master/k8s-loadbalancer/guestbook-frontend-loadbalance-reserved.png)
 
 4. Save the file, and redeploy the service by running the following command:
 
