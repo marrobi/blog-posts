@@ -40,7 +40,14 @@ The status of the kube router daemonset can be seen by running:
 kubectl get daemonset kube-router -n kube-system
 ```
 
-Once all pods in the daemonset are running I verified functionality using examples in Ahmet Alp Balkan's [Network Policy recipes repository](https://github.com/ahmetb/kubernetes-network-policy-recipes).
+Once all pods in the daemonset are running:
+
+```bash
+NAME          DESIRED   CURRENT   READY     UP-TO-DATE   AVAILABLE   NODE-SELECTOR                 AGE
+kube-router   3         3         3         3            3           beta.kubernetes.io/os=linux   4m
+```
+
+I verified functionality using examples in Ahmet Alp Balkan's [Network Policy recipes repository](https://github.com/ahmetb/kubernetes-network-policy-recipes).
 
 The samples, covering both ingress and egress policies, all performed as expected.
 
