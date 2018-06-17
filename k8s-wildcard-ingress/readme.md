@@ -136,6 +136,6 @@ For testing purposes I added a entry to the hosts file on my local machine, in t
 
 Navigate to [https://sample-app.example.com](https://sample-app.example.com) in a browser:
 
-![success]('success.png')
+![success](https://github.com/marrobi/blog-posts/raw/master/k8s-wildcard-ingress/success.png)
 
 This solution works, however there may be other, "better" solutions. Do let me know if you a have an alternative solution.
