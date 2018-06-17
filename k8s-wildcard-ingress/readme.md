@@ -2,7 +2,7 @@
 
 ## Scenario
 
-An organisation wanted to deploy each application into a  separate Kubernetes namespace. Each application will be available at a subdomain of example.com, via a wildcard DNS entry of *.example.com pointing to the ingress controller's service IP address.  A single wildcard TLS certificate ( *.example.com ) will be used to protect all applications using the ingress controller. It was desired that only a single TLS secret should exist on the cluster to facilitate certificate renewal.
+An organisation wanted to deploy each application into a  separate Kubernetes namespace. Each application will be available at a subdomain of example.com, via a wildcard DNS entry of \*.example.com pointing to the ingress controller's service IP address.  A single wildcard TLS certificate ( \*.example.com ) will be used to protect all applications using the ingress controller. It was desired that only a single TLS secret should exist on the cluster to facilitate certificate renewal.
 
 ## Challenges
 
@@ -41,13 +41,15 @@ kubectl create secret tls wildcard-example-com --key  wildcard.example.com.key -
 
 ### Create Helm Chart
 
+Run the following command to create a new Helm chart in a directory named sample-app:
+
 ```bash
 helm create sample-app
 ```
 
 ### Add External Service
 
-Added a ```service-ingress.yaml``` file to create a service of type ExternalName that deploys into the ingress namespace to the Helm chart:
+Added a ```service-ingress.yaml``` file to the Helm chart templates directory to create a service of type ExternalName that deploys into the ingress namespace to the Helm chart:
 
 ```yaml
 
