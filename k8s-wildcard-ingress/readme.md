@@ -132,10 +132,10 @@ For testing purposes I added a entry to the hosts file on my local machine, in t
 51.140.163.143  sample-app.example.com
 ```
 
-### Test
+### Test the solution
 
 Navigate to [https://sample-app.example.com](https://sample-app.example.com) in a browser:
 
-![success](https://github.com/marrobi/blog-posts/raw/master/k8s-wildcard-ingress/success.png)
+<img src="https://github.com/marrobi/blog-posts/raw/master/k8s-wildcard-ingress/success.png" width="500" />
 
 This solution works, however there may be other, "better" solutions. Do let me know if you a have an alternative solution.
