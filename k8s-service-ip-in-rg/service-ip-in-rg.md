@@ -1,4 +1,4 @@
-# Deploy Kubernetes service on Azure with IP address in a different resource group to the cluster
+# Deploy a Kubernetes Service on Azure with IP address that is in a different resource group to the cluster
 
 When a service is deployed to Kubernetes we often need to specift a load balancerIP address. this means that if the service gets recreated it retains the same IP. By default when you deploy a service in Kubernetes on Azure that static IP address must reside in the same resource group as the cluster nodes. This causes a couple of potential problems:
 
@@ -108,7 +108,7 @@ Retrieve the cluster credentials and deploy the service:
 
 az aks get-credentials -g $CLUSTER_RG -n cluster1
 
-envsubst < service-ip-rg.yaml | kubectl apply -f -
+envsubst < service-ip-in-rg.yaml | kubectl apply -f -
 
 ```
 
